@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Enter Spotify Playlist Info</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #F1F1F1;
+      }
+      .container {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px #999;
+        animation: slide-down 0.5s ease-in-out;
+      }
+      @keyframes slide-down {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      h1 {
+        margin-top: 50px;
+        color: #2196F3;
+      }
+      label {
+        font-weight: bold;
+        margin-right: 10px;
+        color: #333;
+      }
+      input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #2196F3;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #2196F3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter Spotify Playlist Info</h1>
+      <form action="/submit-playlist-info" method="post">
+        <label for="playlist_link">Playlist Link:</label>
+        <input type="text" id="playlist_link" name="playlist_link" required>
+        <br><br>
+        <label for="creator_name">Creator Name:</label>
+        <input type="text" id="creator_name" name="creator_name" required>
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
